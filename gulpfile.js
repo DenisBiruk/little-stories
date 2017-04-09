@@ -8,10 +8,12 @@ var rename = require('gulp-rename');
 var del = require('del');
 var autoprefixer = require('gulp-autoprefixer');
 var jade = require('gulp-jade');
+var wait = require('gulp-wait');
 
 gulp.task('sass', function () {
   return gulp.src('app/sass/main.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(wait(200))
+    .pipe(sass({outputStyle: 'compressed', includePaths: ['app/sass/base', 'app/sass/partials']}))
     .pipe(autoprefixer({browsers: ['last 15 versions', '> 1%', 'ie 9'], cascade: true }))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
@@ -27,7 +29,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src(['app/js/**/*.js', '!app/js/common.min.js'])
+  return gulp.src(['app/js/**/*.js', '!app/js/common.min.js', '!app/js/jquery.min.js'])
     .pipe(concat('common.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'));

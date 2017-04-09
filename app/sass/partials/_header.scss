@@ -1,0 +1,53 @@
+header {
+  height: 100vh;
+  
+  .header-content {
+    position: relative;
+    height: 100%;
+    background-image: url('../img/little-prince-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+
+  .middle-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/little-prince-middle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .fore-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/little-prince.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 200px;
+  }
+
+  .caption {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape),(orientation: portrait) {
+  header {
+    .fore-img {
+      top: 130px;
+    }
+  }
+}
