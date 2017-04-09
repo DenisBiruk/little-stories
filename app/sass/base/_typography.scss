@@ -1,7 +1,7 @@
 body {
-  font-family: 'roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 a {
@@ -15,5 +15,6 @@ a {
 @for $i from 1 through 6 {
   h#{7 - $i} {
     font-size: 8px * $i;
+    font-weight: 700;
   }
 }
