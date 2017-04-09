@@ -59,17 +59,17 @@ gulp.task('watch', ['browser-sync', 'sass', 'jade', 'scripts'], function () {
 
 gulp.task('build', ['clean', 'sass', 'scripts'], function () {
   var buildCSS = gulp.src('app/css/**/*.css')
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('docs/css'));
 
   var buildFonts = gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('docs/fonts'));
 
   var buildScripts = gulp.src('app/js/**/*.js')
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('docs/js'));
 
   var buildImages = gulp.src('app/img/**/*')
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('docs/img'));
 
   var buildHTML = gulp.src('app/*.html')
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
