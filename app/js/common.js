@@ -1,4 +1,12 @@
-var foreImgTop = parseInt($('.fore-img').css('top'));
+const foreImgTop = parseInt($('.fore-img').css('top'));
+
+$(document).ready(function() {
+  $("a[href^='#']").click(function(){
+    const href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(href).offset().top+"px"});
+      return false;
+  });
+});
 
 $(window).scroll(function () {
   var wScroll = $(this).scrollTop();
