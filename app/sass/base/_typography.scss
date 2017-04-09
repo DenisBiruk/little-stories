@@ -1,0 +1,13 @@
+body {
+  font-family: 'roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+a {
+  &:link,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+}

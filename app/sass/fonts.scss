@@ -1,0 +1,27 @@
+@mixin font-face-roboto($file-name, $weight, $style) {
+    $path-fonts: '../fonts/roboto';
+    @font-face {
+        font-family: 'roboto';
+        src:url('#{$path-fonts}/#{$file-name}.eot');
+        src:url('#{$path-fonts}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$path-fonts}/#{$file-name}.woff2') format('woff2'),
+            url('#{$path-fonts}/#{$file-name}.woff') format('woff'),
+            url('#{$path-fonts}/#{$file-name}.ttf') format('truetype'),
+            url('#{$path-fonts}/#{$file-name}.svg#roboto') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face-roboto('roboto-thin-webfont', 100, normal);
+@include font-face-roboto('roboto-thinitalic-webfont', 100, italic);
+@include font-face-roboto('roboto-light-webfont', 300, normal);
+@include font-face-roboto('roboto-lightitalic-webfont', 300, italic);
+@include font-face-roboto('roboto-regular-webfont', 400, normal);
+@include font-face-roboto('roboto-italic-webfont', 400, italic);
+@include font-face-roboto('roboto-medium-webfont', 500, normal);
+@include font-face-roboto('roboto-mediumitalic-webfont', 500, italic);
+@include font-face-roboto('roboto-bold-webfont', 700, normal);
+@include font-face-roboto('roboto-bolditalic-webfont', 700, italic);
+@include font-face-roboto('roboto-black-webfont', 900, normal);
+@include font-face-roboto('roboto-blackitalic-webfont', 900, italic);
